@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BootStrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- JQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <!-- BootStrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- FontAwesome 4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery JS for AJAX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Custom Styling -->
+    <!-- <link rel="stylesheet" href="./Styles/styles.css" /> -->
+
+    <title>Weather Dashnboard</title>
+</head>
+
+<body>
+    <!-- Main Page Header Section -->
+    <header>
+        <div class="container-fluid bg-dark text-white">
+            <h1 class="p-3 text-center">Weather Dashboard</h1>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <!-- Left Panel Search Section -->
+            <aside class="col-3 bg-light">
+                <!-- Search City Section -->
+                <h2>Search for a City:</h2>
+                <div class="input-group col-12 mb-3">
+                    <input type="text" class="form-control mr-1" id="search" placeholder="City or City, ST" aria-label="City">
+                    <div class="btn btn-primary" id="search-btn">
+                        <span><i class="fa fa-search" id="search-icon" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+
+                <!-- Previously Searched Quick Link Section -->
+                <div id="search-history" class="col-12">
+                    <div class="btn form-control text-left bg-white text-secondary" data-city="Austin" id="city-0">
+                        Austin</div>
+                    <div class="btn form-control text-left bg-white text-secondary" data-city="Chicago" id="city-1">
+                        Chicago</div>
+                    <div class="btn form-control text-left bg-white text-secondary" data-city="New York" id="city-2">New
+                        York</div>
+                </div>
+            </aside>
+
+            <!-- Weather Details Section-->
+            <section class="col-9 bg-white">
+                <div class="weather-now border p-3">
+                    <h2><span id="city-name">City Name</span> <span id="day-0">(Today's Date)</span></h2>
+                    <p>Temperature: <span id="day-0-temp">150.7 F</span></p>
+                    <p>Humidity: <span id="day-0-humidity">98%</span></p>
+                    <p>Wind Speed: <span id="day-0-wind">320 MPH</span></p>
+                    <p>UV Index: <span id="day-0-uv-index" class="bg-danger text-white p-1">9.24</span></p>
+                </div>
+                <div class="forcast">
+                    <h3 class="mt-3">5-Day Forcast:</h3>
+                    <div id="forecast" class="row row-eq-height text-white">
+                        <div class="bg-primary col m-2">
+                            <p id="day-1">Tomorrow</p>
+                            <i class="fa fa-sun-o" aria-hidden="true"></i>
+                            <p id="day-1-temp">120 F</p>
+                            <p id="day-1-humidity">24%</p>
+                        </div>
+                        <div class="bg-primary col m-2">
+                            <p id="day-1">Next Day</p>
+                            <i class="fa fa-sun-o" aria-hidden="true"></i>
+                            <p id="day-1-temp">10 F</p>
+                            <p id="day-1-humidity">0%</p>
+                        </div>
+                        <div class="bg-primary col m-2">
+
+                        </div>
+                        <div class="bg-primary col m-2">
+
+                        </div>
+                        <div class="bg-primary col m-2">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+
+    <!-- Custom Scripts -->
+    <script src="./Assets/Scripts/weather.js"></script>
+</body>
+
+</html>
