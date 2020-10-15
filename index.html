@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- jQuery JS for AJAX -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Moment.js with Locales -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
 
     <!-- Custom Styling -->
     <!-- <link rel="stylesheet" href="./Styles/styles.css" /> -->
@@ -46,57 +48,35 @@
             <aside class="col-3 bg-light">
                 <!-- Search City Section -->
                 <h2>Search for a City:</h2>
-                <div class="input-group col-12 mb-3">
-                    <input type="text" class="form-control mr-1" id="search" placeholder="City or City, ST" aria-label="City">
-                    <div class="btn btn-primary" id="search-btn">
-                        <span><i class="fa fa-search" id="search-icon" aria-hidden="true"></i></span>
+                <form class="form-inline mb-3" id="search-form">
+                    <div class="input-group">
+                        <input type="text" class="form-control mr-1" id="search" placeholder="City or City, ST"
+                            aria-label="City">
                     </div>
-                </div>
+                    <button type="submit" class="btn btn-primary" id="search-btn"><i class="fa fa-search"
+                            id="search-icon" aria-hidden="true"></i></button>
+                </form>
 
                 <!-- Previously Searched Quick Link Section -->
                 <div id="search-history" class="col-12">
-                    <div class="btn form-control text-left bg-white text-secondary" data-city="Austin" id="city-0">
-                        Austin</div>
-                    <div class="btn form-control text-left bg-white text-secondary" data-city="Chicago" id="city-1">
-                        Chicago</div>
-                    <div class="btn form-control text-left bg-white text-secondary" data-city="New York" id="city-2">New
-                        York</div>
+                    <!-- Search History will be populated via JS-->
                 </div>
             </aside>
 
             <!-- Weather Details Section-->
             <section class="col-9 bg-white">
                 <div class="weather-now border p-3">
-                    <h2><span id="city-name">City Name</span> <span id="day-0">(Today's Date)</span></h2>
-                    <p>Temperature: <span id="day-0-temp">150.7 F</span></p>
-                    <p>Humidity: <span id="day-0-humidity">98%</span></p>
-                    <p>Wind Speed: <span id="day-0-wind">320 MPH</span></p>
-                    <p>UV Index: <span id="day-0-uv-index" class="bg-danger text-white p-1">9.24</span></p>
+                    <h2><span id="city-name">City Name </span> <span id="day-0">(Today's Date)</span><img
+                            id="day-0-icon" /></h2>
+                    <p>Temperature: <span id="day-0-temp">Temp F</span></p>
+                    <p>Humidity: <span id="day-0-humidity">Humidity %</span></p>
+                    <p>Wind Speed: <span id="day-0-wind">Speed MPH heading degrees ° from N</span></p>
+                    <p>UV Index: <span id="day-0-uv-index" class="bg-danger text-white p-1">UV Index</span></p>
                 </div>
                 <div class="forcast">
                     <h3 class="mt-3">5-Day Forcast:</h3>
                     <div id="forecast" class="row row-eq-height text-white">
-                        <div class="bg-primary col m-2">
-                            <p id="day-1">Tomorrow</p>
-                            <i class="fa fa-sun-o" aria-hidden="true"></i>
-                            <p id="day-1-temp">120 F</p>
-                            <p id="day-1-humidity">24%</p>
-                        </div>
-                        <div class="bg-primary col m-2">
-                            <p id="day-1">Next Day</p>
-                            <i class="fa fa-sun-o" aria-hidden="true"></i>
-                            <p id="day-1-temp">10 F</p>
-                            <p id="day-1-humidity">0%</p>
-                        </div>
-                        <div class="bg-primary col m-2">
-
-                        </div>
-                        <div class="bg-primary col m-2">
-
-                        </div>
-                        <div class="bg-primary col m-2">
-
-                        </div>
+                        <!-- Forecast will be populated via JS -->>
                     </div>
                 </div>
             </section>
