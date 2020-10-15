@@ -42,7 +42,7 @@ https://jyoung7223.github.io/bcs_hw6_justin_young/
 
 * Below is a gif showing the completed product:
 
-![](.Assets/my-weather.gif)
+![](./Assets/my-weather.gif)
 
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
