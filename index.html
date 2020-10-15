@@ -23,12 +23,16 @@
     <!-- FontAwesome 4 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- jQuery JS for AJAX -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Moment.js with Locales -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
 
+    <!-- For tooltip operations -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <!-- Custom Styling -->
-    <!-- <link rel="stylesheet" href="./Styles/styles.css" /> -->
+    <link rel="stylesheet" href="./Assets/Styles/weather.css" />
 
     <title>Weather Dashnboard</title>
 </head>
@@ -41,16 +45,16 @@
         </div>
     </header>
 
+    <!-- Main Content Section -->
     <div class="container-fluid">
-
         <div class="row">
             <!-- Left Panel Search Section -->
-            <aside class="col-3 bg-light">
+            <aside class="col-md-3 bg-light">
                 <!-- Search City Section -->
                 <h2>Search for a City:</h2>
                 <form class="form-inline mb-3" id="search-form">
                     <div class="input-group">
-                        <input type="text" class="form-control mr-1" id="search" placeholder="City or City, ST"
+                        <input type="text" class="form-control mr-1" id="search" placeholder="City/State/City, State"
                             aria-label="City">
                     </div>
                     <button type="submit" class="btn btn-primary" id="search-btn"><i class="fa fa-search"
@@ -64,10 +68,12 @@
             </aside>
 
             <!-- Weather Details Section-->
-            <section class="col-9 bg-white">
-                <div class="weather-now border p-3">
-                    <h2><span id="city-name">City Name </span> <span id="day-0">(Today's Date)</span><img
-                            id="day-0-icon" /></h2>
+            <section class="col-md-9 bg-white">
+                <div class="weather-now border rounded p-3">
+                    <h2>
+                        <span id="city-name">City Name </span> <span id="day-0">(Today's Date)</span>
+                        <img id="day-0-icon" data-toggle="tooltip"/>
+                    </h2>
                     <p>Temperature: <span id="day-0-temp">Temp F</span></p>
                     <p>Humidity: <span id="day-0-humidity">Humidity %</span></p>
                     <p>Wind Speed: <span id="day-0-wind">Speed MPH heading degrees ° from N</span></p>
